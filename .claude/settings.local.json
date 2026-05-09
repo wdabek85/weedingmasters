@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php -v)",
+      "Bash(composer --version)",
+      "Bash(npm -v)",
+      "Bash(mv app/public app/public.stock-backup)",
+      "Bash(mkdir app/public)",
+      "Read(//private/tmp/**)",
+      "Bash(rm -rf bedrock-tmp)",
+      "Bash(composer create-project *)",
+      "Bash(cp /tmp/bedrock-tmp/composer.json ./composer.json)",
+      "Bash(cp /tmp/bedrock-tmp/composer.lock ./composer.lock)",
+      "Bash(cp /tmp/bedrock-tmp/.env.example ./.env.example)",
+      "Bash(cp /tmp/bedrock-tmp/.gitignore ./.gitignore)",
+      "Bash(cp /tmp/bedrock-tmp/wp-cli.yml ./wp-cli.yml)",
+      "Bash(composer install *)",
+      "Bash(curl *)",
+      "Bash(yarn install *)",
+      "Bash(yarn build *)",
+      "Bash(php -l app/public/wp-config.php)",
+      "Bash(php -l config/application.php)",
+      "Bash(php -l app/public/index.php)",
+      "Bash(php -r 'define\\('\\\\''WP_USE_THEMES'\\\\'', false\\); $_SERVER['\\\\''HTTP_HOST'\\\\'']='\\\\''weddingmasters.local'\\\\''; $_SERVER['\\\\''REQUEST_URI'\\\\'']='\\\\''/'\\\\''; require '\\\\''app/public/wp-config.php'\\\\''; echo '\\\\''BOOT OK '\\\\''.WP_HOME.PHP_EOL;')",
+      "Bash(rm -rf node_modules yarn.lock)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(kill 55355)",
+      "Bash(ps *)",
+      "Bash(kill 55859)",
+      "Bash(grep -oE \".\\\\\\\\{0,80\\\\\\\\}container-glam.\\\\\\\\{0,80\\\\\\\\}\")"
+    ]
+  }
+}

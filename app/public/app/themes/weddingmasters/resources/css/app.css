@@ -1,0 +1,137 @@
+@import "tailwindcss" theme(static);
+@source "../../app/**/*.php";
+@source "../**/*.blade.php";
+@source "../**/*.js";
+
+/* ============================================================
+   Wedding Masters — Tailwind v4 design tokens
+   Source of truth: /DESIGN_SYSTEM.md (project root)
+   ============================================================ */
+@theme {
+  /* Colors */
+  --color-noir: #0A0A0A;
+  --color-charcoal: #1F1F1F;
+  --color-champagne: #C9A961;
+  --color-gold-deep: #A88B3F;
+  --color-ivory: #FAF7F2;
+  --color-cream: #F2EBDD;
+  --color-blush: #E8C4C4;
+  --color-mute: #8A8A8A;
+  --color-line: #E5DFD2;
+
+  /* Fonts */
+  --font-serif: "Cormorant Garamond", "Cormorant", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Type scale (mobile baseline; .md: utilities provide desktop) */
+  --text-eyebrow: 0.75rem;
+  --text-eyebrow--line-height: 1.2;
+  --text-eyebrow--letter-spacing: 0.16em;
+
+  --text-display: 2.75rem;
+  --text-display--line-height: 1.05;
+  --text-h1: 2.25rem;
+  --text-h1--line-height: 1.1;
+  --text-h2: 1.75rem;
+  --text-h2--line-height: 1.15;
+  --text-h3: 1.375rem;
+  --text-h3--line-height: 1.2;
+  --text-lead: 1.125rem;
+  --text-lead--line-height: 1.5;
+
+  /* Radius */
+  --radius-xs: 0.125rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-pill: 9999px;
+
+  /* Shadow */
+  --shadow-sm: 0 1px 2px rgba(10, 10, 10, 0.04);
+  --shadow-md: 0 8px 24px -8px rgba(10, 10, 10, 0.12);
+  --shadow-lg: 0 24px 60px -16px rgba(10, 10, 10, 0.18);
+
+  /* Section spacing */
+  --spacing-section-y-sm: 3rem;
+  --spacing-section-y: 5rem;
+  --spacing-section-y-lg: 7.5rem;
+
+  /* Motion (durations: use Tailwind defaults duration-150/300/500) */
+  --ease-glam: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  /* Marquee — ticker między sekcjami (uruchamia <x-marquee>) */
+  --animate-marquee: marquee 38s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Alpine: hide elements with x-cloak before Alpine boots */
+[x-cloak] { display: none !important; }
+
+/* ============================================================
+   Custom utilities
+   ============================================================ */
+
+/* Site container — 1440 max, responsive horizontal padding (24/40/80) */
+@utility container-glam {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 1440px;
+  padding-inline: 1.5rem;     /* 24px mobile */
+
+  @media (min-width: 768px) {
+    padding-inline: 2.5rem;   /* 40px md */
+  }
+
+  @media (min-width: 1024px) {
+    padding-inline: 5rem;     /* 80px lg+ */
+  }
+}
+
+
+/* Desktop type-scale overrides via media query — Tailwind v4 keeps tokens
+   resolution-independent, so we bump display/h* sizes at md+. */
+@media (min-width: 768px) {
+  @theme {
+    --text-display: 4.5rem;
+    --text-display--line-height: 1.0;
+    --text-h1: 3.25rem;
+    --text-h1--line-height: 1.05;
+    --text-h2: 2.5rem;
+    --text-h2--line-height: 1.1;
+    --text-h3: 1.75rem;
+    --text-h3--line-height: 1.2;
+    --text-lead: 1.25rem;
+    --text-lead--line-height: 1.55;
+  }
+}
+
+/* Base elements */
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color: var(--color-charcoal);
+    background-color: var(--color-ivory);
+  }
+
+  h1, h2, h3, h4, h5, h6,
+  .font-display {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    color: var(--color-noir);
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background-color: var(--color-champagne);
+    color: var(--color-noir);
+  }
+}
+
+/* Globalnie: brak podkreśleń linków. Poza @layer base, żeby nie przegrywać
+   z nielayerowanymi stylami WP (wp-block-*, klasyczne style). */
+a:where(:not([class*="underline"])) {
+  text-decoration: none;
+}

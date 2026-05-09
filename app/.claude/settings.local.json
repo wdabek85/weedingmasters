@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(curl -s \"http://weddingmasters.local\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://[::1]:5173/app/themes/weddingmasters/public/build/resources/js/app.js\")",
+      "Bash(lsof -nP -iTCP:5173 -sTCP:LISTEN)",
+      "Bash(curl -s \"http://[::1]:5173/app/themes/weddingmasters/public/build/resources/js/app.js\")",
+      "Bash(curl -sI \"http://weddingmasters.local\")",
+      "Bash(\" \"/Users/wiktor/Local Sites/weddingmasters/DESIGN_SYSTEM.md\" | grep -E \"planned)",
+      "Bash(grep -E \"^\\\\| `\" \"/Users/wiktor/Local Sites/weddingmasters/DESIGN_SYSTEM.md\" | grep -E \"planned)",
+      "Bash(wip\" | head -40)",
+      "Bash(curl -s \"http://[::1]:5173/app/themes/weddingmasters/public/build/node_modules/.vite/deps/alpinejs.js?v=89907d7a\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" \"http://[::1]:5173/app/themes/weddingmasters/public/build/node_modules/.vite/deps/alpinejs.js?v=89907d7a\")",
+      "Bash(git config *)",
+      "Bash(git init *)",
+      "Bash(git remote *)",
+      "Bash(git add *)"
+    ]
+  }
+}
