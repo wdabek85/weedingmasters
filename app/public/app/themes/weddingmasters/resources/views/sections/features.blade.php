@@ -18,8 +18,8 @@
                 </h2>
             </div>
 
-            {{-- Logo accent (do podglądu) — przesunięte 10% od prawej krawędzi --}}
-            <img src="{{ get_theme_file_uri('resources/images/nazwa.png') }}"
+            {{-- Logo accent (do podglądu) — wersja z footera, przesunięta 10% od prawej --}}
+            <img src="{{ get_theme_file_uri('resources/images/logoweddingmasters.png') }}"
                  alt=""
                  class="hidden h-20 shrink-0 object-contain mr-[10%] lg:block xl:h-24" />
         </div>
