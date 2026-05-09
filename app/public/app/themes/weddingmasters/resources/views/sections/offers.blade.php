@@ -56,7 +56,7 @@
             <x-offer-card
                 title="Wesela"
                 description="Pełna oprawa muzyczna i prowadzenie wesela od początku do ostatniego tańca."
-                href="#"
+                href="#jak-wyglada"
                 :image="get_theme_file_uri('resources/images/wesele.jpg')"
                 :featured="true"
                 cta="Dowiedz się więcej"
