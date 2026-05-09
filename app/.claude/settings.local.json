@@ -15,7 +15,18 @@
       "Bash(git config *)",
       "Bash(git init *)",
       "Bash(git remote *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(ssh-keygen -F wiktor1249.ssh.dhosting.pl)",
+      "Bash(SSHPASS='T-ff@4jVJAn}' sshpass *)",
+      "Bash(sshpass -e *)",
+      "Bash(curl -sI -L \"https://weddingmasters.wdb-creative.pl/\")",
+      "Bash(curl -sL \"https://weddingmasters.wdb-creative.pl/\")",
+      "Bash(host weddingmasters.wdb-creative.pl)",
+      "Bash(curl -vL \"https://weddingmasters.wdb-creative.pl/\")",
+      "Bash(curl -sL \"https://weddingmasters.wdb-creative.pl/\" -o /tmp/wm.html -w \"STATUS:%{http_code} SIZE:%{size_download}\\\\n\")",
+      "Read(//tmp/**)"
     ]
   }
 }
