@@ -21,7 +21,7 @@
             {{-- Maleńki accent — fi_image.png (do podmiany przez user-a w resources/images/) --}}
             <img src="{{ get_theme_file_uri('resources/images/fi_image.png') }}"
                  alt=""
-                 class="hidden h-16 w-16 shrink-0 object-contain opacity-80 lg:block xl:h-20 xl:w-20" />
+                 class="hidden h-20 w-20 shrink-0 object-contain mr-4 lg:mr-6 lg:block xl:h-24 xl:w-24" />
         </div>
 
         {{-- Cards --}}
