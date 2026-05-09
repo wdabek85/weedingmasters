@@ -1,10 +1,13 @@
 {{--
     Component: x-logo
-    Wordmark for Wedding Masters (text-only placeholder, see DESIGN_SYSTEM.md §2).
+    Image-based wordmark — dwie wersje pliku per tło:
+      tone="dark"  → nazwa.png              (na jasnym tle — nav)
+      tone="light" → logoweddingmasters.png (na ciemnym tle — footer)
+    See DESIGN_SYSTEM.md §2.
     Props:
       - size: 'sm' | 'md' | 'lg'  (default 'md')
-      - tone: 'dark' | 'light'    (default 'dark')  -- color on light bg / on dark bg
-      - href: string|null         (default home_url) -- set href=false to render as plain span
+      - tone: 'dark' | 'light'    (default 'dark')
+      - href: string|null         (default home_url) — false = render as plain span
 --}}
 @props([
     'size' => 'md',
@@ -14,23 +17,21 @@
 
 @php
     $sizeClasses = [
-        'sm' => 'text-xl md:text-2xl',
-        'md' => 'text-2xl md:text-3xl',
-        'lg' => 'text-3xl md:text-5xl',
-    ][$size] ?? 'text-2xl md:text-3xl';
+        'sm' => 'h-8 md:h-9',
+        'md' => 'h-10 md:h-12',
+        'lg' => 'h-12 md:h-16',
+    ][$size] ?? 'h-10 md:h-12';
 
-    $toneClasses = $tone === 'light' ? 'text-ivory' : 'text-noir';
-    $accentTone  = $tone === 'light' ? 'text-champagne' : 'text-champagne';
-
-    $base = "font-serif font-semibold leading-none tracking-tight inline-flex items-baseline gap-[0.35ch] {$sizeClasses} {$toneClasses}";
+    $imgFile = $tone === 'light' ? 'logoweddingmasters.png' : 'nazwa.png';
+    $imgSrc  = get_theme_file_uri('resources/images/' . $imgFile);
 @endphp
 
 @if ($href)
-    <a href="{{ $href }}" {{ $attributes->merge(['class' => $base, 'aria-label' => 'Wedding Masters — strona główna']) }}>
-        <span>Wedding</span><span class="{{ $accentTone }}">·</span><span>Masters</span>
+    <a href="{{ $href }}" {{ $attributes->merge(['class' => 'inline-flex items-center', 'aria-label' => 'Wedding Masters — strona główna']) }}>
+        <img src="{{ $imgSrc }}" alt="Wedding Masters" class="w-auto {{ $sizeClasses }}" />
     </a>
 @else
-    <span {{ $attributes->merge(['class' => $base]) }}>
-        <span>Wedding</span><span class="{{ $accentTone }}">·</span><span>Masters</span>
+    <span {{ $attributes->merge(['class' => 'inline-flex items-center']) }}>
+        <img src="{{ $imgSrc }}" alt="Wedding Masters" class="w-auto {{ $sizeClasses }}" />
     </span>
 @endif
