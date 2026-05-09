@@ -18,10 +18,10 @@
                 </h2>
             </div>
 
-            {{-- Maleńki accent — fi_image.png (do podmiany przez user-a w resources/images/) --}}
-            <img src="{{ get_theme_file_uri('resources/images/fi_image.png') }}"
+            {{-- Logo accent (do podglądu) — przesunięte 10% od prawej krawędzi --}}
+            <img src="{{ get_theme_file_uri('resources/images/nazwa.png') }}"
                  alt=""
-                 class="hidden h-20 w-20 shrink-0 object-contain mr-4 lg:mr-6 lg:block xl:h-24 xl:w-24" />
+                 class="hidden h-20 shrink-0 object-contain mr-[10%] lg:block xl:h-24" />
         </div>
 
         {{-- Cards --}}
