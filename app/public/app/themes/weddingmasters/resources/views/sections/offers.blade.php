@@ -42,7 +42,7 @@
         <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-[1fr_1.6fr_1fr_1fr] lg:grid-rows-[minmax(280px,1fr)_minmax(280px,1fr)] lg:gap-5">
 
             {{-- ============== Text intro ============== --}}
-            <div class="md:col-span-2 lg:col-span-1 lg:row-span-2 lg:flex lg:flex-col lg:justify-center lg:py-4 lg:pr-2">
+            <div class="md:col-span-2 lg:col-span-1 lg:row-span-2 lg:flex lg:flex-col lg:justify-start lg:pr-2">
                 <x-eyebrow class="mb-5">Co gramy</x-eyebrow>
                 <h2 class="mb-5 font-serif text-3xl font-semibold leading-[1.15] text-noir md:text-4xl">
                     Dobieramy oprawę<br>do Waszej historii.
