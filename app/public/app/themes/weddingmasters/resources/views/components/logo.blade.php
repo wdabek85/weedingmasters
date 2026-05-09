@@ -19,7 +19,7 @@
     $sizeClasses = [
         'sm' => 'h-8 md:h-9',
         'md' => 'h-10 md:h-12',
-        'lg' => 'h-16 md:h-20',
+        'lg' => 'h-24 md:h-32',
     ][$size] ?? 'h-10 md:h-12';
 
     $imgFile = $tone === 'light' ? 'logoweddingmasters.png' : 'nazwa.png';
