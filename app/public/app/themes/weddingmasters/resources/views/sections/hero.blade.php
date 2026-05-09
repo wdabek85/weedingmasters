@@ -29,7 +29,7 @@
                 Wedding Masters
             </span>
 
-            <h1 class="mb-6 font-serif text-h1 font-semibold leading-[1.1] text-ivory md:text-display md:leading-[1.05]">
+            <h1 class="mb-6 font-serif text-3xl font-semibold leading-[1.15] text-ivory md:text-display md:leading-[1.05]">
                 Cieszcie się swoim weselem.<br>
                 Parkiet ogarniamy my.
             </h1>
