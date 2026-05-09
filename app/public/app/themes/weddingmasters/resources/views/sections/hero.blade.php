@@ -6,10 +6,9 @@
 <section class="relative isolate flex items-end overflow-hidden bg-noir text-ivory min-h-[640px] md:min-h-[760px] lg:min-h-[820px]">
 
     {{-- ============================== BG LAYER ============================== --}}
-    {{-- Wedding/party stock photo (Unsplash). Replace once real photo/aftermovie delivered. --}}
     <div aria-hidden="true" class="absolute inset-0">
         <img
-            src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1920&q=80"
+            src="{{ get_theme_file_uri('resources/images/hero.webp') }}"
             alt=""
             class="h-full w-full object-cover object-center"
             loading="eager"
