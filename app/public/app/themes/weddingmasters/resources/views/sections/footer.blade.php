@@ -40,7 +40,7 @@
 
             {{-- ============== Brand col (5/12) ============== --}}
             <div class="md:col-span-12 lg:col-span-5">
-                <x-logo size="md" tone="light" />
+                <x-logo size="lg" tone="light" />
 
                 <p class="mt-5 max-w-md font-sans text-base leading-relaxed text-ivory/70">
                     Duet DJ-ski na Wasze wesele.<br>
