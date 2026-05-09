@@ -3,14 +3,14 @@
     Wireframe ref: §01. Cinematic photo bg with parallax (data-hero-parallax → JS in app.js).
     MVP photo: Picsum seeded URL. Replace with real photo/aftermovie video when delivered.
 --}}
-<section class="relative isolate flex items-end overflow-hidden bg-noir text-ivory min-h-[780px] md:min-h-[820px] lg:min-h-[900px]">
+<section class="relative isolate flex items-end overflow-hidden bg-noir text-ivory min-h-[920px] md:min-h-[820px] lg:min-h-[900px]">
 
     {{-- ============================== BG LAYER ============================== --}}
     <div aria-hidden="true" class="absolute inset-0">
         <img
             src="{{ get_theme_file_uri('resources/images/hero.webp') }}"
             alt=""
-            class="h-full w-full object-cover object-center"
+            class="h-full w-full object-cover object-top md:object-center"
             loading="eager"
             decoding="async" />
     </div>
