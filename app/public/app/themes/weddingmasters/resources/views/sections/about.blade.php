@@ -18,7 +18,7 @@
         <div class="grid gap-10 lg:grid-cols-2 lg:gap-16">
 
             {{-- ============== Photo: duet ============== --}}
-            <figure class="relative isolate aspect-[4/3] overflow-hidden rounded-2xl bg-noir shadow-md lg:aspect-auto lg:h-full lg:min-h-[560px]">
+            <figure class="relative isolate aspect-[3/4] overflow-hidden rounded-2xl bg-noir shadow-md md:aspect-[4/3] lg:aspect-auto lg:h-full lg:min-h-[560px]">
                 <img src="{{ get_theme_file_uri('resources/images/duet.webp') }}"
                      alt="Wedding Masters — duet DJ-ski"
                      class="absolute inset-0 h-full w-full object-cover"
