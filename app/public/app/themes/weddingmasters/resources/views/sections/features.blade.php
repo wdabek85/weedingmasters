@@ -6,23 +6,29 @@
 <section id="wyrozniki" class="bg-ivory py-section-y md:py-section-y-lg">
     <div class="container-glam">
 
-        {{-- Heading + drobny image-placeholder accent (lg+ only) po prawej --}}
+        {{-- Heading + maleńka disco-ball ornament (lg+ only) po prawej --}}
         <div class="mb-12 flex items-end justify-between gap-10 md:mb-16">
             <div class="max-w-2xl">
-                <x-eyebrow class="mb-5">Wyróżniki</x-eyebrow>
+                <x-eyebrow class="mb-5 inline-flex items-center gap-2">
+                    <span aria-hidden="true" class="inline-block h-1.5 w-1.5 rounded-full bg-champagne"></span>
+                    Wyróżniki
+                </x-eyebrow>
                 <h2 class="font-serif text-3xl font-semibold leading-[1.15] text-noir md:text-4xl">
                     Co dostajecie z nami
                 </h2>
             </div>
 
-            {{-- Tiny image-placeholder ornament — tylko lg+, super subtelny --}}
-            <svg class="hidden h-16 w-16 shrink-0 text-mute/40 lg:block xl:h-20 xl:w-20"
+            {{-- Tiny disco-ball ornament — wesele/impreza/DJ w jednej ikonie --}}
+            <svg class="hidden h-16 w-16 shrink-0 text-champagne/70 lg:block xl:h-20 xl:w-20"
                  viewBox="0 0 24 24" fill="none" stroke="currentColor"
                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
                  aria-hidden="true">
-                <rect x="3" y="3" width="18" height="18" rx="3"/>
-                <circle cx="9" cy="9" r="1.6"/>
-                <path d="m3 16 5-5 4 4 4-4 5 5"/>
+                <line x1="12" y1="2" x2="12" y2="4"/>
+                <circle cx="12" cy="13" r="8"/>
+                <ellipse cx="12" cy="13" rx="8" ry="2.5"/>
+                <ellipse cx="12" cy="13" rx="2.5" ry="8"/>
+                <line x1="6" y1="7.5" x2="18" y2="18.5" stroke-width="0.9"/>
+                <line x1="18" y1="7.5" x2="6" y2="18.5" stroke-width="0.9"/>
             </svg>
         </div>
 
