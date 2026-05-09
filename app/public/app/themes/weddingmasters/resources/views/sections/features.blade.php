@@ -18,18 +18,10 @@
                 </h2>
             </div>
 
-            {{-- Tiny disco-ball ornament — wesele/impreza/DJ w jednej ikonie --}}
-            <svg class="hidden h-16 w-16 shrink-0 text-champagne/70 lg:block xl:h-20 xl:w-20"
-                 viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                 aria-hidden="true">
-                <line x1="12" y1="2" x2="12" y2="4"/>
-                <circle cx="12" cy="13" r="8"/>
-                <ellipse cx="12" cy="13" rx="8" ry="2.5"/>
-                <ellipse cx="12" cy="13" rx="2.5" ry="8"/>
-                <line x1="6" y1="7.5" x2="18" y2="18.5" stroke-width="0.9"/>
-                <line x1="18" y1="7.5" x2="6" y2="18.5" stroke-width="0.9"/>
-            </svg>
+            {{-- Maleńki accent — fi_image.png (do podmiany przez user-a w resources/images/) --}}
+            <img src="{{ get_theme_file_uri('resources/images/fi_image.png') }}"
+                 alt=""
+                 class="hidden h-16 w-16 shrink-0 object-contain opacity-80 lg:block xl:h-20 xl:w-20" />
         </div>
 
         {{-- Cards --}}
