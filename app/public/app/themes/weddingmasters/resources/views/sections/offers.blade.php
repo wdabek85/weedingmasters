@@ -16,7 +16,7 @@
             'title' => 'Studniówki',
             'description' => 'Elegancko, z klasą i najlepszym klimatem.',
             'href' => '#',
-            'accent' => 'charcoal',
+            'image' => get_theme_file_uri('resources/images/studniowka.jpg'),
             'cs' => 'lg:col-span-1',
         ],
         [
@@ -69,7 +69,8 @@
                     :title="$o['title']"
                     :description="$o['description']"
                     :href="$o['href']"
-                    :accent="$o['accent']"
+                    :image="$o['image'] ?? null"
+                    :accent="$o['accent'] ?? 'gold'"
                     :class="$o['cs']"
                 />
             @endforeach
