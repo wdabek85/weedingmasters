@@ -30,7 +30,7 @@
             'title' => '18-tki, jubileusze',
             'description' => 'Twoja impreza, nasza energia. Zabawa na najwyższym poziomie.',
             'href' => '#',
-            'accent' => 'rose',
+            'image' => get_theme_file_uri('resources/images/osiemnastka.jpg'),
             'cs' => 'md:col-span-2 lg:col-span-2',
         ],
     ];
