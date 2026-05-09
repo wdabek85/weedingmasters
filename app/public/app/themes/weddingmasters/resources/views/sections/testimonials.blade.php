@@ -41,16 +41,24 @@
             </p>
         </div>
 
-        {{-- ============== Cards grid ============== --}}
-        <div class="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
+        {{-- ============== Cards: mobile slider + md/lg grid ==============
+             Mobile: horizontal snap scroll, kart 85% szer., następna karta peek
+             z prawej = wizualny sygnał że jest więcej.
+             md+: standard grid 2/3 kolumny. --}}
+        <div class="flex snap-x snap-mandatory gap-5 overflow-x-auto pb-2 scroll-px-1
+                    [scrollbar-width:none] [&::-webkit-scrollbar]:hidden
+                    md:grid md:snap-none md:grid-cols-2 md:gap-6 md:overflow-visible md:pb-0
+                    lg:grid-cols-3">
             @foreach ($reviews as $r)
-                <x-testimonial-card
-                    :name="$r['name']"
-                    :location="$r['location']"
-                    :date="$r['date']"
-                >
-                    {{ $r['quote'] }}
-                </x-testimonial-card>
+                <div class="snap-start shrink-0 basis-[85%] md:basis-auto md:shrink">
+                    <x-testimonial-card
+                        :name="$r['name']"
+                        :location="$r['location']"
+                        :date="$r['date']"
+                    >
+                        {{ $r['quote'] }}
+                    </x-testimonial-card>
+                </div>
             @endforeach
         </div>
 
