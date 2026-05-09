@@ -57,7 +57,7 @@
                 title="Wesela"
                 description="Pełna oprawa muzyczna i prowadzenie wesela od początku do ostatniego tańca."
                 href="#"
-                accent="gold"
+                :image="get_theme_file_uri('resources/images/wesele.jpg')"
                 :featured="true"
                 cta="Dowiedz się więcej"
                 class="md:col-span-2 lg:col-span-1 lg:row-span-2"
