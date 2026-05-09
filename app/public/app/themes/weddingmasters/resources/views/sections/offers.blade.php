@@ -23,7 +23,7 @@
             'title' => 'Eventy firmowe',
             'description' => 'Muzyka, która buduje atmosferę i integruje.',
             'href' => '#',
-            'accent' => 'warm',
+            'image' => get_theme_file_uri('resources/images/event.jpg'),
             'cs' => 'lg:col-span-1',
         ],
         [
