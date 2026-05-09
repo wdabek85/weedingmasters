@@ -3,7 +3,7 @@
     Wireframe ref: §01. Cinematic photo bg with parallax (data-hero-parallax → JS in app.js).
     MVP photo: Picsum seeded URL. Replace with real photo/aftermovie video when delivered.
 --}}
-<section class="relative isolate flex items-end overflow-hidden bg-noir text-ivory min-h-[640px] md:min-h-[760px] lg:min-h-[820px]">
+<section class="relative isolate flex items-end overflow-hidden bg-noir text-ivory min-h-[780px] md:min-h-[820px] lg:min-h-[900px]">
 
     {{-- ============================== BG LAYER ============================== --}}
     <div aria-hidden="true" class="absolute inset-0">
@@ -15,14 +15,11 @@
             decoding="async" />
     </div>
 
-    {{-- Overlays (NOT parallax — stay in place)
-         Mobile: lżejszy uniform tint + lżejsza vignette → zdjęcie się przebija
-         md+: oryginalne wartości (na większym viewport mocniejszy tint nie szkodzi)
-         Bottom gradient zostaje strong na każdym ekranie — chroni czytelność tekstu --}}
-    <div aria-hidden="true" class="absolute inset-0 bg-noir/30 md:bg-noir/55"></div>
+    {{-- Overlays (NOT parallax — stay in place) --}}
+    <div aria-hidden="true" class="absolute inset-0 bg-noir/55"></div>
     <div aria-hidden="true" class="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_75%_25%,rgba(201,169,97,0.20),transparent_60%)]"></div>
     <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-t from-noir via-noir/55 to-transparent"></div>
-    <div aria-hidden="true" class="absolute inset-0 bg-[radial-gradient(ellipse_120%_120%_at_50%_50%,transparent_55%,rgba(10,10,10,0.30)_100%)] md:bg-[radial-gradient(ellipse_120%_120%_at_50%_50%,transparent_55%,rgba(10,10,10,0.55)_100%)]"></div>
+    <div aria-hidden="true" class="absolute inset-0 bg-[radial-gradient(ellipse_120%_120%_at_50%_50%,transparent_55%,rgba(10,10,10,0.55)_100%)]"></div>
 
     {{-- ============================== CONTENT ============================== --}}
     <div class="container-glam relative z-10 pb-14 pt-32 md:pb-20 md:pt-40 lg:pb-24 lg:pt-48">
